@@ -1,0 +1,21 @@
+form {
+    background-color: rgb(88, 197, 88);
+    width: 400px;
+    margin: 20px;
+    box-shadow: 5px 5px 5px 5px;
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    background-color: rgba(255, 255, 255,0.7);
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+}
+
+li>input{
+    margin-left: 10px;
+}
