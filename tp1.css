@@ -64,16 +64,28 @@ a{
 
    
 }
-
-nav:hover
+a:hover{
+    color: black;
+    font-family: monospace;
+}
+form:hover
 {
+   
     background-color: wheat;
-    transform: rotate(360deg);
-    transition: all 5s;
+    transform: rotateX(360deg);
+    transition: all 15s;
+    transform-origin: left;
+    -webkit-transform-origin: left;
     
 }
 
 input:focus
 {
     transform: scale(2,2);
+   
+}
+body{
+    transform-style: preserve-3d;
+    perspective: 200px;
+   
 }
