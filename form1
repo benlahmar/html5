@@ -1,0 +1,73 @@
+<html>
+<head>
+
+</head>
+<body>
+<form  >
+    <fieldset >
+<legend>Your Deyails</legend>
+   
+<ul>
+    <li>
+      <label>Name</label>  <input type="text" placeholder="votre nom" required />
+    </li>
+    <li>
+      <label>Email</label>  <input type="email" placeholder="exemple@dom.com" required />
+    </li>
+    <li>
+      <label>Phone</label>  <input type="tel" placeholder="+212 66 66 66 66" required />
+    </li>
+</ul>
+</fieldset>
+
+<fieldset >
+    <legend>Your Deyails</legend>
+       
+    <ul>
+        <li>
+          <label>Adresse</label><textarea rows="5"></textarea>
+        </li>
+        <li>
+          <label>Post code</label>  <input type="text" pattern="\d{3}-\d{3}-\w{2}" placeholder="100-000-ZZ" required />
+        </li>
+        <li>
+          <label>Contry</label>  <select>
+              <option>Maroc</option>
+              <option>Egypt</option>
+              <option>Senegale</option>
+          </select>
+        </li>
+    </ul>
+    </fieldset>
+
+    <fieldset >
+        <legend>Card Details</legend>
+           
+        <ul>
+            <li>
+              <label>Card type</label>  
+              Visa <input type="radio" name="visa" />
+              MasterCard <input type="radio" name="master" />
+              AmeX <input type="radio" name="amex" />
+            </li>
+            <li>
+              <label>Card number</label>  <input min="999999999999" type="number" " required />
+            </li>
+            <li>
+              <label>Security code</label>  <input min="100" max="999" type="number"  required />
+            </li>
+            <li>
+                <input type="text" required />
+            </li>
+        </ul>
+        </fieldset>
+<ul>
+    <li>
+        <input type="submit" value="valider"
+    </li>
+</ul>
+
+</form>
+</body>
+
+</html>
