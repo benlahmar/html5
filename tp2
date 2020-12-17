@@ -1,0 +1,84 @@
+<html>
+    <head>
+<style>
+.f{
+    padding: 10px;
+    margin: 10px;
+    border: 1px ;
+    border-style: groove;
+    border-color: blue;
+    background-color: gold;
+    width: 200PX;
+    height: 200px;
+    position: absolute;
+}
+#abc{
+    background-color: gray;
+    padding: 20px;
+    position: relative;
+    top: 60px;
+    left: 200px;
+    width: 240px;
+    height: 240px;
+   transform-style: preserve-3d;
+  
+}
+#abc:hover {
+    transition: all   ;
+    transition-duration: 5s;
+    transform: rotate3d(1,1,1,180deg);
+    }
+#id1
+{
+      transform:translateX(-100px) rotateY(90deg);
+      transform-origin: bottom;
+  
+  -webkit-transform-origin: bottom;
+}
+#id2
+{
+   transform: translateX(100px) rotateY(-90deg);
+   
+    background-color: indigo;
+    transform-origin: bottom;
+  
+  -webkit-transform-origin: bottom;
+}
+#id3
+{
+   transform: translateY(100px) rotateX(90deg);
+   
+    background-color: indigo;
+}
+#id4
+{
+   transform: translateY(-100px) rotateX(-90deg);
+   
+    background-color: lawngreen;
+}
+</style>
+    </head>
+    <body>
+<div id="abc">
+    <div class="f" id="id1">
+        Face 1
+    </div>
+    <div class="f"  id="id2">
+        Face 2
+    </div>
+    <div class="f"  id="id3">
+        Face 3
+    </div>
+    <div class="f">
+        Face 4
+    </div>
+    <div class="f">
+        Face 5
+    </div>
+    <div class="f">
+        Face 6
+    </div>
+</div>
+
+    </body>
+</html>
