@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <style>
+            .abc{
+                background-color: gold;
+                border: solid 2px;;
+            }
+        </style>
+<script>
+    function aa()
+    {
+       d= document.getElementById('d1');
+       tab=document.createElement("table");
+       for( i=0;i<5;i++)
+       {
+           tr=document.createElement("tr");
+           for(j=0;j<5;j++)
+           {
+               td=document.createElement('td');
+               x=document.createElement("button");
+               tt=document.createTextNode(i);
+               x.appendChild(tt);
+               td.appendChild(x);
+               tr.appendChild(td);
+
+           }
+           tab.appendChild(tr);
+       }
+       tab.setAttribute("class","abc");
+       d.appendChild(tab);
+      
+       console.log(d);
+    }
+</script>
+    </head>
+    <body>
+        <button onclick="aa()">test</button>
+        <div id='d1'></div>
+    </body>
+</html>
