@@ -7,18 +7,65 @@
             }
         </style>
 <script>
+    function cc(x){
+        x.setAttribute("hidden",'hidden');
+    }
+    function sc()
+    {
+        tab= document.getElementById('tab');
+       
+      for(i=0;i<5;i++){
+        tr=document.getElementById('tr'+i);
+           for(j=0;j<4;j++)
+           {
+              
+               td=document.createElement('td');
+               x=document.createElement("button");
+               tt=document.createTextNode('exp');
+               x.setAttribute("onclick","cc(this)");
+               
+               x.appendChild(tt);
+               td.appendChild(x);
+               tr.appendChild(td);
+
+           }
+           //tab.appendChild(tr);
+        }
+       
+       tab.setAttribute("class","abc");
+       d.appendChild(tab);
+      
+       console.log(d);
+    }
+var val="";
+    function ff(vv)
+    {
+        inp=document.getElementById('put');
+        //vv.childNodes
+        val+=vv.childNodes[0].nodeValue;
+        inp.setAttribute("value",val);
+console.log(vv.childNodes[0].nodeValue);
+    }
+
     function aa()
     {
        d= document.getElementById('d1');
        tab=document.createElement("table");
+       tab.setAttribute('id','tab');
+       inp=document.createElement('input');
+       inp.setAttribute('type','text');
+       inp.setAttribute('id',"put");
+       d.appendChild(inp);
        for( i=0;i<5;i++)
        {
            tr=document.createElement("tr");
+           tr.setAttribute("id","tr"+i);
            for(j=0;j<5;j++)
            {
                td=document.createElement('td');
                x=document.createElement("button");
                tt=document.createTextNode(i);
+               x.setAttribute("onclick",'ff(this)');
                x.appendChild(tt);
                td.appendChild(x);
                tr.appendChild(td);
@@ -35,6 +82,8 @@
     </head>
     <body>
         <button onclick="aa()">test</button>
+        <button onclick="sc()">scientifique</button>
+
         <div id='d1'></div>
     </body>
 </html>
