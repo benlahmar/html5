@@ -1,0 +1,63 @@
+<html>
+    <head>
+<script>
+    function aa(pos)
+    {
+        var p=document.getElementById("ici");
+        p.innerHTML= "<h1>"+pos.coords.latitude+" "+pos.coords.longitude+"</h1>";
+        localStorage.setItem("lat",pos.coords.latitude);
+        localStorage.setItem("long",pos.coords.longitude);
+       // sessionStorage.
+    }
+    function bb(err)
+    {
+        console.log(err);
+    }
+    navigator.geolocation.getCurrentPosition(aa,bb);
+    var idwatch;
+    function suivit()
+    {
+        idwatch=navigator.geolocation.watchPosition(ss);
+        
+    }
+    function ss(pos)
+    {
+        var p=document.getElementById("ici");  
+        p.innerHTML += "<h1>"+pos.coords.latitude+" "+pos.coords.longitude+"</h1>";
+        adddata(pos.coords.latitude,pos.coords.longitude);
+    }
+   function arreter() {
+        navigator.geolocation.clearWatch(idwatch);
+    }
+    var db ;
+    function dbase()
+    {
+        db= openDatabase('mabase1', '1.0', 'Test DB', 2 * 1024 * 1024);
+        db.transaction(function (tx) {   
+   tx.executeSql('CREATE TABLE IF NOT EXISTS position (id , log, lat)'); 
+
+});
+}
+var cpt=1;
+function adddata(lat,long)
+{
+    db.transaction(function (tx) {   
+    tx.executeSql('insert into position values('+cpt+','+lat+','+long+')'); 
+    cpt++;
+    });
+}
+
+    
+</script>
+    </head>
+    <body>
+        <div id="ici"></div>
+        <button onclick="suivit()">suivit position</button>
+        <button onclick="arreter()">arreter le  suivit de la position</button>
+
+        <button onclick="dbase()">database</button>
+        <button onclick="adddata()">add data</button>
+    </body>
+   
+
+</html>
