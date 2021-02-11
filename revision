@@ -40,6 +40,27 @@ li>a:hover{
 }
 </style>
     </head>
+    <script>
+    function paswcomplixity()
+    {
+      psw1test= document.getElementById('pswtest1');
+      m= document.getElementById('m');
+        psw1=document.getElementById("psw1").value;
+        m.value=psw1.length;
+        if(psw1.length<5)
+        {
+            console.log(psw1.length);
+           
+        psw1test.innerHTML="password faible....";
+        }
+        else
+        if(psw1.length>5 && psw1.length<7)
+        psw1test.innerHTML="password moyen....";
+        else
+        psw1test.innerHTML="password fort....";
+    }
+</script>
+</head>
     <body>
         <header>
             <span>+1 800 123 45 67</span>
@@ -61,12 +82,21 @@ li>a:hover{
             </ul>
         </nav>
         <article>
+            <h4>
+                DISCOVER JOOBSY TODAY
+            </h4>
             <h1>
-                Find your New Job Easiest Way With Joobsy
+                Find your New Job Easiest<br/> Way With Joobsy
             </h1>
             <div>
                 <form>
-
+                    <i class="abcd "></i>
+                    <input type="email" placeholder="example@dom.com" >
+                    <input oninput="paswcomplixity()" type="password" id="psw1"  pattern="((\d+)|(\w+))+" placeholder="*****" >
+                    <span id="pswtest1" ></span>
+                    <meter value="0" max="10" id="m"></meter>
+                    <input type="password" id="psw2"  placeholder="*****" >
+                    <input type="button"  value="submit"/>
                 </form>
             </div>
         </article>
