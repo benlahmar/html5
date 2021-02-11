@@ -1,0 +1,74 @@
+<html>
+    <head>
+<style>
+body{
+    background-image: url('ny.jpeg');
+}
+header{
+    
+    height: 10%;
+    background-color: rgba(255,255,255,0.6);
+    width: 100%;
+    border-style: outset;
+}
+span , select{
+    padding: 10px;
+    margin: 10px;
+}
+select ,span:nth-child(4)
+{
+    float:right;
+    
+}
+nav>ul>li{
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+
+}
+li>a{
+    text-decoration: none;
+    font-size: larger;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+li > a:nth-child(1){
+    font-size: 40px;
+    margin-right: 20px;;
+}
+li>a:hover{
+    color: red;
+}
+</style>
+    </head>
+    <body>
+        <header>
+            <span>+1 800 123 45 67</span>
+            <span>  Support@mail.com</span>
+            
+           <select>
+               <option>Language</option>
+               <option>FR</option>
+           </select> 
+           <span> Simpson</span>
+        </header>
+        <nav>
+            <ul>
+                <li><a href=''>Joobsy</a></li>
+                <li><a href=''>Home</a></li>
+                <li><a href=''>Jobs</a></li>
+                <li><a href=''>Condidate</a></li>
+                <li><a href=''>Employers</a></li>
+            </ul>
+        </nav>
+        <article>
+            <h1>
+                Find your New Job Easiest Way With Joobsy
+            </h1>
+            <div>
+                <form>
+
+                </form>
+            </div>
+        </article>
+    </body>
+</html>
